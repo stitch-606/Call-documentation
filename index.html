@@ -8,6 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal show">
+        <div class="modal-content">
+            <h3>Enter Password</h3>
+            <input type="password" id="formPassword" placeholder="Password" style="width:100%;margin-bottom:1rem;">
+            <div class="modal-buttons">
+                <button id="passwordSubmit" class="primary-btn">Submit</button>
+            </div>
+            <div id="passwordError" class="error-message" style="display:none;margin-top:1rem;">Incorrect password ... plese refer back to Friday</div>
+        </div>
+    </div>
+
     <div class="theme-toggle">
         <button id="themeToggle" aria-label="Toggle theme">
             <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -55,7 +67,6 @@
                 <select id="callReason">
                     <option value="Technical Related">Technical Related</option>
                     <option value="Name Change">Name Change</option>
-
                 </select>
             </div>
 

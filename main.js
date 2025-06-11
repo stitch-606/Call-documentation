@@ -2,6 +2,9 @@
 const AUTO_SAVE_KEY = 'supportCallFormData';
 const AUTO_SAVE_INTERVAL = 2000; // Save every 2 seconds
 
+// Password protection
+const FORM_PASSWORD = 'Dstx07804';
+
 function saveFormData() {
     const formData = {
         callerType: document.getElementById('callerType').value,
@@ -326,6 +329,21 @@ function toggleTheme() {
     html.className = html.className === 'dark' ? 'light' : 'dark';
 }
 
+// Password modal logic
+function checkPassword() {
+    const modal = document.getElementById('passwordModal');
+    const input = document.getElementById('formPassword');
+    const error = document.getElementById('passwordError');
+    if (input.value === FORM_PASSWORD) {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    } else {
+        error.style.display = 'block';
+        input.value = '';
+        input.focus();
+    }
+}
+
 // Event listeners for autocomplete
 document.getElementById('agentNotes').addEventListener('input', handleAutocomplete);
 document.getElementById('agentNotes').addEventListener('keydown', handleKeyboardNavigation);
@@ -381,6 +399,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const callbackInput = document.getElementById('callbackNumber');
     callbackInput.value = '111-111-1111';
     callbackInput.readOnly = true;
+
+    // Password protection
+    const passwordModal = document.getElementById('passwordModal');
+    if (passwordModal) {
+        document.body.style.overflow = 'hidden';
+        document.getElementById('passwordSubmit').onclick = checkPassword;
+        document.getElementById('formPassword').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') checkPassword();
+        });
+        setTimeout(() => document.getElementById('formPassword').focus(), 100);
+    }
 
     loadFormData();
     

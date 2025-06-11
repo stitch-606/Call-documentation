@@ -1,6 +1,6 @@
 :root {
     /* Light theme */
-    --bg-primary: #f8fafc;
+    --bg-primary: #e8f2fc;
     --bg-secondary: #ffffff;
     --text-primary: #1a1a1a;
     --text-secondary: #4b5563;
@@ -10,16 +10,16 @@
     --button-primary: #44ef25;
     --button-secondary: #4b5563;
     --button-reset:#44ef52;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.185);
     --notification-success: #059669;
-    --notification-error: #dc2626;
+    --notification-error: #ff0000;
     --font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 .dark {
     /* Dark theme */
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
+    --bg-primary: #051230;
+    --bg-secondary: #121e30;
     --text-primary: #f1f5f9;
     --text-secondary: #94a3b8;
     --border-color: #334155;
@@ -28,7 +28,7 @@
     --button-primary: #44ef52;
     --button-secondary: #64748b;
     --button-reset: #44ef52;
-    --shadow-color: rgba(0, 0, 0, 0.575);
+    --shadow-color: rgba(0, 0, 0, 0.836);
 }
 
 * {
