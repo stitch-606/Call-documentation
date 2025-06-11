@@ -336,6 +336,7 @@ function checkPassword() {
     const error = document.getElementById('passwordError');
     if (input.value === FORM_PASSWORD) {
         modal.classList.remove('show');
+        modal.style.display = 'none'; // <-- Add this line for Chrome
         document.body.style.overflow = '';
     } else {
         error.style.display = 'block';
